@@ -7,7 +7,7 @@ const app = express();
 
 // Node server
 const server = require('http').createServer(app);
-module.exports.io = require('socket.io')(server);
+module.exports.io = require('socket.io')(server); //estoy exportando el io
 require('./sockets/socket')
 
 //canal publico
