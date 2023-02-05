@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-require('dotenv').config(); //lee el archivo y establece variables de entorno 
+require('dotenv').config(); //lee el archivo env y establece variables de entorno 
 
 //App de express
 const app = express();
