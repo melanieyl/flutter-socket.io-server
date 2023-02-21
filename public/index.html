@@ -11,6 +11,7 @@
     <script src = "socket.io/socket.io.js"></script>
     <script>
         var socket = io();
+        
         socket.on('connect',function(){
             console.log('Conectado al servidor')
         });
@@ -21,9 +22,15 @@
 //estoy emitiendo eventos
         socket.emit('mensaje', {nombre: 'Fernando'});
 //estoy escuchando 
-        socket.on('mensaje', function(payload){
+        socket.on('nuevo-mensaje', function(payload){
             console.log('escuchando :' ,payload);
 
+        });
+        //para escuchar a las bands
+     socket.on('active-bands', function(bands){
+           //console.log(bands);
+           console.clear();
+            console.table(bands);
         });
 
 
